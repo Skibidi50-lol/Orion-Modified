@@ -578,7 +578,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	})
 
 	local WindowStuff = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 10), {
-		Size = UDim2.new(0, 150, 1, -50),
+		Size = UDim2.new(0, 150, 1, -50), -- Cadre GRIS CLAIR
 		Position = UDim2.new(0, 0, 0, 50)
 	}), {
 		AddThemeObject(SetProps(MakeElement("Frame"), {
@@ -654,15 +654,6 @@ function OrionLib:MakeWindow(WindowConfig)
 		Size = UDim2.new(0, 600, 0, 455), -- Fenetre
 		ClipsDescendants = true
 	}), {
-
-	local DEFAULT_SIZE = UDim2.new(0, 600, 0, 455)
-    local customSize = WindowConfig.Size or DEFAULT_SIZE
-    if typeof(customSize) ~= "UDim2" then
-        customSize = DEFAULT_SIZE
-    end
-    
-    OrionLib.Folder = WindowConfig.ConfigFolder
-    OrionLib.SaveCfg = WindowConfig.SaveConfig
 		--SetProps(MakeElement("Image", "rbxassetid://3523728077"), {
 		--	AnchorPoint = Vector2.new(0.5, 0.5),
 		--	Position = UDim2.new(0.5, 0, 0.5, 0),
